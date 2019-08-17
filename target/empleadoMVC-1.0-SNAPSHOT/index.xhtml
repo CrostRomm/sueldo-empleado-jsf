@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      
+    <h:head>
+        <title>Facturacion</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css"></link>
+    </h:head>
+    <h:body>
+        <h:form id="formulario">
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            Nombre  <h:inputText id="name" maxlength="20" a:type="text" a:placeholder="Juan Perez" value="#{formulario.name}"></h:inputText>
+            <br/>
+            <br/>
+            Salario <h:inputText id="salary" maxlength="9" a:type="number" a:placeholder="$ 123.456" value="#{formulario.salary}"></h:inputText>
+            <br/>
+            <br/>
+            Días trabajados <h:inputText id="days" maxlength="3" a:type="number" a:placeholder="15" value="#{formulario.days}"></h:inputText>
+            <br/>
+            <br/>
+            Idiomas
+            <br/>
+            <br/>
+            <h:selectManyCheckbox id="language" value="#{formulario.language}" style=" alignment-baseline: central; alignment-adjust: middle; text-align: center;">
+                <f:selectItem itemValue="50000" itemLabel="Español"/>
+                <f:selectItem itemValue="100000" itemLabel="Ingles"/>
+                <f:selectItem itemValue="500000" itemLabel="Frances"/>
+                <f:selectItem itemValue="1000000" itemLabel="Mandarin"/>
+            </h:selectManyCheckbox>
+            <br/>
+            <br/>
+            <h:commandButton value="Calcular" action="#{formulario.calcularSalario()}"></h:commandButton>
+        </h:form>
+    </h:body>
+</html>
+

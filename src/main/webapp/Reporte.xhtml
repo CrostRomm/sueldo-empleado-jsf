@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Reporte - Desprendible</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css"></link>
+    </h:head>
+    <h:body>
+        <h:outputLabel style="font-size: x-large; font-weight: bold; text-align: center;">¡Buen día!</h:outputLabel>
+        <br/>
+        <br/>
+        <h:outputLabel>Señor(a) </h:outputLabel><h:outputLabel style="font-weight: bold; font-size: larger">#{desprendible.enviaNombre()}
+        </h:outputLabel><h:outputLabel> su sueldo actual es de $</h:outputLabel><h:outputLabel style="font-weight: bold; font-size: larger"> 
+            #{desprendible.enviaSalario()}</h:outputLabel>,<h:outputLabel> con cobro de </h:outputLabel>
+            <h:outputLabel style="font-weight: bold; font-size: larger">#{desprendible.enviaDiasTrabajados()}</h:outputLabel><h:outputLabel> 
+            día(s) y teniendo en cuenta que usted</h:outputLabel><h:outputLabel style="font-weight: bold; font-size: larger"> #{desprendible.enviaIdiomas()},
+            </h:outputLabel><h:outputLabel>adicional recordando que las bonificaciones por hablar algún idioma son
+            (español = $50.000, ingles = $100.000, frances = $500.000 y mandarin $1'000.000), ganando por bonificación 
+            </h:outputLabel><h:outputLabel style="font-weight: bold; font-size: larger">#{desprendible.enviaPrecios()}</h:outputLabel>
+            sus ingresos en esta oportunidad suman un total de:
+        <br/>
+        <br/>
+        <h:outputLabel style="font-weight: bold; font-size: xx-large; alignment-adjust: middle">#{desprendible.salarioFinal()}</h:outputLabel>
+    </h:body>
+</html>
+
